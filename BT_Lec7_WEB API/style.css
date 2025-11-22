@@ -1,0 +1,68 @@
+*{box-sizing:border-box;font-family:Segoe UI, Roboto, Arial, sans-serif}
+body{background:#f5f7fb;margin:0;padding:24px}
+.container{max-width:980px;margin:0 auto;background:#fff;padding:18px;border-radius:8px;box-shadow:0 8px 30px rgba(12,15,30,.06)}
+header{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+
+@media (max-width:520px){.modal-content{width:92%}}.error.visible{display:block}.error{color:#b00020;padding:8px;margin:8px 0;display:none;border-radius:6px;background:#fff0f0;border:1px solid #ffd6d6}.modal-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:12px}label input{width:100%;padding:8px;border-radius:6px;border:1px solid #ddd}label{display:block;margin-bottom:8px}.modal-content h2{margin-top:0}.modal-content{background:#fff;padding:16px;border-radius:8px;width:380px;box-shadow:0 8px 20px rgba(0,0,0,.12)}.hidden{display:none}.modal{position:fixed;inset:0;background:rgba(0,0,0,.4);display:flex;align-items:center;justify-content:center}.pagination button{padding:8px 10px;border-radius:6px;border:1px solid #ddd;background:#fff;cursor:pointer}.pagination{display:flex;gap:8px;align-items:center;justify-content:center;margin-top:12px}.actions .delete{background:#e74c3c;color:#fff}.actions .edit{background:#ffc107;color:#000}.actions button{margin-right:6px;padding:6px 8px;border-radius:6px;border:none;cursor:pointer}th{background:#fafafa}th,td{text-align:left;padding:10px;border-bottom:1px solid #eee}table{width:100%;border-collapse:collapse;margin-top:8px}#createBtn{padding:8px 12px;border-radius:6px;border:none;background:#2b8aef;color:#fff;cursor:pointer}
+.table-wrap{overflow:auto}#searchInput{padding:8px 10px;border-radius:6px;border:1px solid #ccd;min-width:220px}.controls{display:flex;gap:8px;align-items:center}h1{margin:0;font-size:20px}
+
+.modal.hidden{display:none}
+
+/* Bao chính */
+.app-wrap{max-width:1100px;margin:0 auto}
+.app-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+.card{background:#fff;padding:18px;border-radius:12px;box-shadow:0 10px 30px rgba(12,15,30,.06)}
+
+/* Tiêu đề */
+.title h1{margin:0;font-size:22px;color:#0b2545}
+.subtitle{margin:4px 0 0;color:#576574;font-size:13px}
+
+/* Alerts */
+.alert{padding:10px;border-radius:8px;margin-bottom:12px;display:none}
+.alert.visible{display:block}
+.alert.error{background:#fff0f0;color:#b00020;border:1px solid #ffd6d6}
+.alert.success{background:#f1fbef;color:#1f7a3a;border:1px solid #c9eccf}
+
+/* Controls */
+.controls{display:flex;gap:12px;align-items:center}
+.search{display:flex;align-items:center;background:#f4f7fb;border:1px solid #e2eaf6;padding:6px;border-radius:8px}
+.search input{border:0;background:transparent;padding:8px 10px;min-width:220px}
+.search button{background:transparent;border:0;padding:6px;color:#8898a6;cursor:pointer}
+
+/* Buttons */
+.btn{padding:8px 12px;border-radius:8px;border:1px solid transparent;background:#f4f6f8;color:#0b2545;cursor:pointer}
+.btn:hover{transform:translateY(-1px)}
+.btn.primary{background:#2b8aef;color:#fff;border-color:#2b8aef}
+.btn.outline{background:#fff;border-color:#e3eaf6}
+
+/* Table */
+.table-wrap{overflow:auto}
+.users-table{width:100%;border-collapse:collapse;margin-top:6px}
+.users-table thead th{background:linear-gradient(180deg,#f6f9ff,#ffffff);padding:12px;text-align:left;color:#243447}
+.users-table tbody td{padding:12px;border-bottom:1px solid #f0f3f8;color:#2b3a45}
+.users-table tbody tr:hover{background:#fbfdff}
+.col-actions{text-align:right}
+.actions button{margin-left:8px;padding:6px 10px;border-radius:8px;border:none;cursor:pointer}
+.actions .edit{background:#ffd54a;color:#2b2b2b}
+.actions .delete{background:#ff6b6b;color:#fff}
+
+/* Modal nâng cao */
+.modal{position:fixed;inset:0;background:rgba(11,37,69,0.35);display:flex;align-items:center;justify-content:center;z-index:60}
+.modal-content{background:#fff;padding:20px;border-radius:12px;width:420px;box-shadow:0 18px 40px rgba(11,37,69,.12);transform:translateY(6px);transition:all .18s ease}
+.modal.hidden{display:none}
+.modal-close{position:absolute;right:12px;top:10px;border:0;background:transparent;font-size:20px;cursor:pointer;color:#64707a}
+.modal h2{margin:0 0 10px;color:#0b2545}
+.field{display:block;margin-bottom:10px}
+.label-text{display:block;font-size:13px;color:#6b7580;margin-bottom:6px}
+.field input{width:100%;padding:10px;border-radius:8px;border:1px solid #e6eef8;background:#fbfdff}
+.field input:focus{outline:none;box-shadow:0 6px 18px rgba(43,138,239,0.12);border-color:#2b8aef}
+.modal-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:10px}
+
+/* Pagination */
+.pagination{display:flex;gap:12px;align-items:center;justify-content:center;margin-top:14px}
+.page-info{color:#475569}
+
+@media (max-width:620px){
+	.modal-content{width:92%}
+	.controls{flex-direction:column;align-items:flex-end;gap:8px}
+}

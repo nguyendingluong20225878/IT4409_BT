@@ -1,0 +1,93 @@
+<!doctype html>
+<!-- Giao diện chính của ứng dụng CRUD - có comment tiếng Việt để dễ hiểu -->
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Users CRUD — Giao diện nâng cấp</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-wrap">
+    <!-- Header / Thanh tiêu đề -->
+    <header class="app-header">
+      <div class="title"> 
+        <h1>Danh sách người dùng</h1>
+        <!-- <p class="subtitle">CRUD demo — Fetch + async/await </p> -->
+      </div>
+
+      <div class="controls">
+        <!-- Thanh tìm kiếm (live) -->
+        <div class="search">
+          <input id="searchInput" placeholder="Tìm theo tên..." aria-label="Tìm theo tên" />
+          <button id="clearSearch" title="Xóa tìm kiếm">✕</button>
+        </div>
+
+        <!-- Nút mở modal thêm user -->
+        <button id="createBtn" class="btn primary">+ Thêm</button>
+      </div>
+    </header>
+
+    <!-- Nội dung chính: bảng + phân trang -->
+    <main class="card">
+      <!-- Thông báo lỗi / success -->
+      <div id="error" class="alert error" aria-live="polite"></div>
+      <div id="success" class="alert success" aria-live="polite"></div>
+
+      <div class="table-wrap">
+        <table id="usersTable" class="users-table" aria-label="Danh sách người dùng">
+          <thead>
+            <tr>
+              <th class="col-name">Họ & Tên</th>
+              <th class="col-email">Email</th>
+              <th class="col-phone">Điện thoại</th>
+              <th class="col-actions">Hành động</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+
+      <div class="pagination">
+        <button id="prevPage" class="btn outline">« Trước</button>
+        <span id="pageInfo" class="page-info"></span>
+        <button id="nextPage" class="btn outline">Sau »</button>
+      </div>
+    </main>
+  </div>
+
+  <!-- Modal Create / Edit -->
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-content" role="document">
+      <button class="modal-close" id="modalClose" aria-label="Đóng">×</button>
+      <h2 id="modalTitle">Thêm người dùng</h2>
+      <!-- Form có id để JS bắt sự kiện -->
+      <form id="userForm">
+        <input type="hidden" id="userId" />
+
+        <label class="field">
+          <span class="label-text">Họ & Tên</span>
+          <input id="name" placeholder="Nhập họ và tên" required />
+        </label>
+
+        <label class="field">
+          <span class="label-text">Email</span>
+          <input id="email" type="email" placeholder="email@example.com" required />
+        </label>
+
+        <label class="field">
+          <span class="label-text">Điện thoại</span>
+          <input id="phone" placeholder="0123456789" required />
+        </label>
+
+        <div class="modal-actions">
+          <button type="submit" class="btn primary">Lưu</button>
+          <button type="button" id="cancelBtn" class="btn">Hủy</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
